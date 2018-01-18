@@ -1,11 +1,15 @@
 {
   "name": "import-all-index",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Uses dynamic import() to recursively loop through a directory tree, import all index.mjs files and return an array of references to the imported modules",
   "main": "index.mjs",
   "@std/esm": true,
   "scripts": {
-    "test": "mocha --require @std/esm test.mjs"
+    "test": "mocha --require @std/esm test.mjs",
+    "versionbump:fix": "npm version patch --no-git-tag-version",
+    "versionbump:feature": "npm version minor --no-git-tag-version",
+    "versionbump:breakingchanges": "npm version major --no-git-tag-version",
+    "npm-publish": "npm publish"
   },
   "repository": {
     "type": "git",
@@ -28,9 +32,9 @@
   },
   "homepage": "https://github.com/lorengreenfield/import-all-index#readme",
   "devDependencies": {
-    "mocha": "^4.0.1"
+    "mocha": "^5.0.0"
   },
   "dependencies": {
-    "@std/esm": "^0.18.0"
+    "@std/esm": "^0.19.6"
   }
 }
