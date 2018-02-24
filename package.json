@@ -1,6 +1,6 @@
 {
   "name": "import-all-index",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Uses dynamic import() to recursively loop through a directory tree, import all index.mjs files and return an array of references to the imported modules",
   "main": "index.mjs",
   "@std/esm": true,
@@ -34,7 +34,7 @@
   "devDependencies": {
     "mocha": "^5.0.0"
   },
-  "dependencies": {
-    "@std/esm": "^0.21.4"
+  "peerDependencies": {
+    "@std/esm": "^0.21.6"
   }
 }
