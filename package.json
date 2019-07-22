@@ -1,11 +1,12 @@
 {
   "name": "import-all-index",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "type": "module",
   "description": "Uses dynamic import() to recursively loop through a directory tree, import all index.mjs files and return an array of references to the imported modules",
-  "main": "index.mjs",
+  "main": "index.js",
   "esm": true,
   "scripts": {
-    "test": "mocha --require esm test.mjs",
+    "test": "mocha --require esm test.js",
     "versionbump:fix": "npm version patch --no-git-tag-version",
     "versionbump:feature": "npm version minor --no-git-tag-version",
     "versionbump:breakingchanges": "npm version major --no-git-tag-version",
