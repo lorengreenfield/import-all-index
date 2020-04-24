@@ -1,6 +1,6 @@
 {
   "name": "import-all-index",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "description": "Uses dynamic import() to recursively loop through a directory tree, import all index.mjs files and return an array of references to the imported modules",
   "main": "index.js",
