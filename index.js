@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import url from 'url'
 
 export default function importAllIndex (dir) {
   return new Promise(async resolve => {
@@ -12,7 +13,7 @@ export default function importAllIndex (dir) {
         let childImport = await importAllIndex(filePath)
         imported = imported.concat(childImport)
       } else if (file === 'index.mjs' || file === 'index.js') {
-        let imp = await import(filePath)
+        let imp = await import(url.pathToFileURL(filePath).toString())
         imported.push(imp)
       }
     }
